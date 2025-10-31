@@ -1,0 +1,284 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: linear-gradient(135deg, #ff6b9d, #c44569, #f8b500, #ff6b9d);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+        }
+
+        html {
+        height: 100%;
+    }
+    
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .love-container {
+            text-align: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .main-title {
+            font-size: 4rem;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            border-right: 3px solid #ffffff;
+            white-space: nowrap;
+            animation: typing 4s steps(40, end) infinite, blink-caret 0.75s step-end infinite;
+            font-family: 'Great Vibes', cursive;
+            font-weight: 400;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #ffe4e1;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            animation: fadeInOut 3s ease-in-out infinite;
+        }
+
+        @keyframes typing {
+            0% { width: 0; }
+            50% { width: 100%; }
+            100% { width: 0; }
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: #ffffff; }
+        }
+
+        @keyframes fadeInOut {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 2rem;
+            color: #ff1744;
+            animation: float 6s ease-in-out infinite;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .heart:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+        .heart:nth-child(2) { left: 80%; top: 30%; animation-delay: 1s; }
+        .heart:nth-child(3) { left: 20%; top: 70%; animation-delay: 2s; }
+        .heart:nth-child(4) { left: 70%; top: 80%; animation-delay: 3s; }
+        .heart:nth-child(5) { left: 50%; top: 10%; animation-delay: 4s; }
+        .heart:nth-child(6) { left: 90%; top: 60%; animation-delay: 5s; }
+        .heart:nth-child(7) { left: 5%; top: 50%; animation-delay: 1.5s; }
+        .heart:nth-child(8) { left: 60%; top: 15%; animation-delay: 2.5s; }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.8;
+            }
+            25% { 
+                transform: translateY(-20px) rotate(5deg) scale(1.1);
+                opacity: 1;
+            }
+            50% { 
+                transform: translateY(-10px) rotate(-3deg) scale(0.9);
+                opacity: 0.9;
+            }
+            75% { 
+                transform: translateY(-30px) rotate(8deg) scale(1.2);
+                opacity: 1;
+            }
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #ffffff;
+            border-radius: 50%;
+            animation: sparkle 4s linear infinite;
+        }
+
+        .sparkle:nth-child(odd) { animation-delay: 0s; }
+        .sparkle:nth-child(even) { animation-delay: 2s; }
+
+        @keyframes sparkle {
+            0%, 100% { 
+                opacity: 0;
+                transform: scale(0);
+            }
+            50% { 
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .sparkle-1 { left: 15%; top: 25%; }
+        .sparkle-2 { left: 85%; top: 35%; }
+        .sparkle-3 { left: 25%; top: 75%; }
+        .sparkle-4 { left: 75%; top: 85%; }
+        .sparkle-5 { left: 45%; top: 15%; }
+        .sparkle-6 { left: 95%; top: 65%; }
+        .sparkle-7 { left: 10%; top: 55%; }
+        .sparkle-8 { left: 65%; top: 20%; }
+        .sparkle-9 { left: 30%; top: 40%; }
+        .sparkle-10 { left: 80%; top: 70%; }
+
+        .love-message {
+            position: absolute;
+            bottom: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.2rem;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        .heart i {
+            animation: heartPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes glow {
+            from { text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 10px rgba(255,255,255,0.3); }
+            to { text-shadow: 1px 1px 2px rgba(0,0,0,0.3), 0 0 20px rgba(255,255,255,0.6); }
+        }
+
+        .developer-footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0,0,0,0.8);
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(10px);
+            z-index: 20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .developer-profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .developer-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #ff6b9d;
+            object-fit: cover;
+        }
+
+        .developer-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .developer-name {
+            color: #ff6b9d;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        .developer-username {
+            color: #cccccc;
+            font-size: 0.8rem;
+        }
+
+        .developer-name:hover {
+            color: #ffffff;
+            text-shadow: 0 0 10px #ff6b9d;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 10px;
+        }
+
+        .social-link {
+            color: #ff6b9d;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-link:hover {
+            color: #ffffff;
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2rem;
+                padding: 0 20px;
+            }
+            .subtitle {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            .heart {
+                font-size: 1.2rem;
+            }
+            .love-message {
+                font-size: 1rem;
+                bottom: 20%;
+            }
+            .developer-footer {
+                font-size: 0.8rem;
+                padding: 10px;
+                flex-direction: column;
+                gap: 10px;
+            }
+            .developer-avatar {
+                width: 35px;
+                height: 35px;
+            }
+            .developer-name {
+                font-size: 0.9rem;
+            }
+            .social-link {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1.5rem;
+            }
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            .heart {
+                font-size: 1rem;
+            }
+            .love-message {
+                font-size: 0.9rem;
+                bottom: 12%;
+            }
+        }
